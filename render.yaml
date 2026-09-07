@@ -1,0 +1,28 @@
+# Render Blueprint — https://render.com/docs/blueprint-spec
+#
+# The site needs a Node web service, not a static site: /api/brief and
+# /api/call are server routes.
+services:
+  - type: web
+    name: netrasoft-web
+    runtime: node
+    plan: free
+    region: frankfurt
+    branch: main
+    # --include=dev is required: Render sets NODE_ENV=production, which makes
+    # npm skip devDependencies — and the build needs typescript + tailwind.
+    buildCommand: npm ci --include=dev && npm run build
+    # next start reads PORT from the environment and binds 0.0.0.0 by default.
+    startCommand: npm start
+    healthCheckPath: /
+    autoDeploy: true
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+      # Secrets — set these in the Render dashboard, they are never committed.
+      - key: RESEND_API_KEY
+        sync: false
+      - key: BRIEF_TO
+        sync: false
+      - key: BRIEF_FROM
+        sync: false
