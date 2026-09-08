@@ -129,6 +129,23 @@ Replace before launch:
   Workspace, DigitalOcean and Cloud Clusters are platform vendors; NDPC is an
   institutional relationship worth confirming for NetraSoft specifically.
 
+## SEO
+
+- `src/lib/site.ts` is the single source for the public URL, name and the route
+  list. Set `NEXT_PUBLIC_SITE_URL` to the real domain; everything else follows.
+- `layout.tsx` carries the title template (`%s — NetraSoft Solutions`), the
+  description, Open Graph and Twitter cards, robots directives, and an
+  `Organization` JSON-LD block.
+- `src/app/opengraph-image.png` and `twitter-image.png` (1200×630) are the share
+  cards. `sitemap.ts` and `robots.ts` generate `/sitemap.xml` and `/robots.txt`.
+- Each page sets its own `title`, `description` and canonical.
+
+`NEXT_PUBLIC_SITE_URL` is inlined at build time, so it must be set **before** the
+build that ships — changing it later requires a redeploy.
+
+Still worth doing once the domain is live: submit the sitemap in Google Search
+Console, and add real `sameAs` social profile URLs to the JSON-LD block.
+
 ## Forms and email
 
 `Pricing` (project brief) and `BookCall` (call request) post JSON to their routes.

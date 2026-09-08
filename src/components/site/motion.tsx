@@ -177,7 +177,10 @@ export function Typewriter({
 }) {
   const reduced = useReducedMotion();
   const [index, setIndex] = useState(0);
-  const [text, setText] = useState("");
+  /* Starts on the full first phrase so the server renders complete text — an
+     empty start put "We build software" alone in the h1 for crawlers, and made
+     the line reflow on hydration. */
+  const [text, setText] = useState(phrases[0]);
   const [erasing, setErasing] = useState(false);
 
   useEffect(() => {
@@ -214,9 +217,12 @@ export function Typewriter({
   return (
     <span className={className}>
       {text}
-      <span className="anim-caret" aria-hidden>
-        |
-      </span>
+      {/* a drawn bar, not a "|" character — a literal pipe ends up in the
+          heading's text content and in what crawlers read */}
+      <span
+        className="anim-caret ml-1 inline-block h-[0.72em] w-[3px] translate-y-[0.04em] bg-current"
+        aria-hidden
+      />
     </span>
   );
 }

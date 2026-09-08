@@ -19,6 +19,12 @@ services:
     envVars:
       - key: NODE_VERSION
         value: "22"
+      # Canonical URLs, Open Graph images and sitemap.xml are all built from
+      # this. NEXT_PUBLIC_* is inlined at BUILD time, so changing it in the
+      # dashboard needs a redeploy to take effect. Without it everything falls
+      # back to the onrender.com address.
+      - key: NEXT_PUBLIC_SITE_URL
+        sync: false
       # Secrets — set these in the Render dashboard, they are never committed.
       - key: RESEND_API_KEY
         sync: false

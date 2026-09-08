@@ -8,10 +8,14 @@ import LogoStrip from "@/components/site/LogoStrip";
 import { CountUp, Reveal, Spotlight } from "@/components/site/motion";
 import { Bolt, Handover, Shield, Target } from "@/components/site/icons";
 
+const description =
+  "The software development studio behind the web, mobile and cloud systems our clients run on — how we scope, build, test and hand over.";
+
 export const metadata: Metadata = {
-  title: "About — NetraSoft Solutions",
-  description:
-    "The software development studio behind the web, mobile and cloud systems our clients run on — how we scope, build, test and hand over.",
+  title: "About",
+  description,
+  alternates: { canonical: "/about" },
+  openGraph: { title: "About NetraSoft Solutions", description, url: "/about" },
 };
 
 const stats = [

@@ -8,10 +8,14 @@ import Footer from "@/components/site/Footer";
 import Eyebrow from "@/components/site/Eyebrow";
 import { CountUp, Reveal, Spotlight } from "@/components/site/motion";
 
+const description =
+  "Web, mobile and cloud systems we designed, built and still maintain — described by sector, outcome and the stack behind them.";
+
 export const metadata: Metadata = {
-  title: "Our Work — NetraSoft Solutions",
-  description:
-    "Web, mobile and cloud systems we designed, built and still maintain — described by sector, outcome and the stack behind them.",
+  title: "Our Work",
+  description,
+  alternates: { canonical: "/work" },
+  openGraph: { title: "Our Work — NetraSoft Solutions", description, url: "/work" },
 };
 
 const stats = [
