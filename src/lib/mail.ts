@@ -74,7 +74,7 @@ export function shell({
         ${blockHtml}
         <a href="mailto:${escapeHtml(
           replyTo
-        )}" style="display:inline-block;margin-top:24px;background:#f1521c;color:#ffffff;text-decoration:none;font-size:13px;font-weight:600;padding:11px 20px;border-radius:12px;">Reply to ${escapeHtml(
+        )}" style="display:inline-block;margin-top:24px;background:#0060fc;color:#ffffff;text-decoration:none;font-size:13px;font-weight:600;padding:11px 20px;border-radius:12px;">Reply to ${escapeHtml(
     replyName
   )}</a>
       </div>

@@ -60,7 +60,7 @@ export default function Growth() {
                     <Meter
                       pct={b.pct}
                       className="mt-2.5 h-1.5 w-full overflow-hidden rounded-full bg-[#eeeeea]"
-                      barClassName="h-full rounded-full bg-gradient-to-r from-[#f76a34] to-[#ef4b13]"
+                      barClassName="h-full rounded-full bg-gradient-to-r from-[#3d85ff] to-[#0054e8]"
                       delay={i * 120}
                     />
                   </div>

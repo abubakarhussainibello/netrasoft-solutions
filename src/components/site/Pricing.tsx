@@ -78,7 +78,7 @@ function ChipGroup({
             className={[
               "flex items-center gap-2.5 rounded-xl border px-4 py-3 text-left text-[14px] transition-all duration-200",
               active
-                ? "border-brand bg-brand-soft text-ink shadow-[0_2px_10px_rgba(241,82,28,0.14)]"
+                ? "border-brand bg-brand-soft text-ink shadow-[0_2px_10px_rgba(0,96,252,0.14)]"
                 : "border-line bg-white text-[#5c5c5e] hover:-translate-y-0.5 hover:border-line-strong hover:text-ink",
             ].join(" ")}
           >

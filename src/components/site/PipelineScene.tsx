@@ -87,7 +87,7 @@ function Callout({ x, y, w, n, label, delay }: { x: number; y: number; w: number
 }
 
 /* A cube of work riding a rail from one station to the next */
-function Packet({ x, y, dx, dy, delay, dur, tone = "orange" }: { x: number; y: number; dx: number; dy: number; delay: number; dur: number; tone?: Tone }) {
+function Packet({ x, y, dx, dy, delay, dur, tone = "brand" }: { x: number; y: number; dx: number; dy: number; delay: number; dur: number; tone?: Tone }) {
   return (
     <g
       className="anim-packet"
@@ -177,7 +177,7 @@ export default function PipelineScene({ className }: { className?: string }) {
           <path d="M176 516 L200 528 L190 533 L166 521Z" />
           <path d="M166 540 L186 550 L176 555 L156 545Z" />
         </g>
-        <path d="M186 524 L206 534 L196 539 L176 529Z" fill="#f1521c" fillOpacity="0.75" />
+        <path d="M186 524 L206 534 L196 539 L176 529Z" fill="#0060fc" fillOpacity="0.75" />
       </g>
 
       {/* ---------- 02 · build: code writing itself ---------- */}
@@ -187,7 +187,7 @@ export default function PipelineScene({ className }: { className?: string }) {
         <g>
           {[
             { x: 432, y: 474, w: 46, c: "#ffffff", o: 0.65, d: 0 },
-            { x: 444, y: 481, w: 34, c: "#fa7440", o: 0.95, d: 400 },
+            { x: 444, y: 481, w: 34, c: "#4d8dff", o: 0.95, d: 400 },
             { x: 456, y: 488, w: 40, c: "#ffffff", o: 0.4, d: 800 },
             { x: 468, y: 495, w: 28, c: "#ffffff", o: 0.55, d: 1200 },
           ].map((l) => (
@@ -237,20 +237,20 @@ export default function PipelineScene({ className }: { className?: string }) {
         {/* pad */}
         <Slab cx={1030} cy={389} hw={72} hh={36} t={10} />
         {/* deploy rings */}
-        <g fill="none" stroke="#f1521c" strokeWidth="1.6">
+        <g fill="none" stroke="#0060fc" strokeWidth="1.6">
           <ellipse cx="1030" cy="386" rx="46" ry="23" className="anim-ring" />
           <ellipse cx="1030" cy="386" rx="46" ry="23" className="anim-ring" style={{ animationDelay: "1400ms" }} />
         </g>
         {/* exhaust */}
         <path
           d="M1010 372 L1050 372 L1038 330 L1022 330Z"
-          fill="#f1521c"
+          fill="#0060fc"
           fillOpacity="0.16"
           className="anim-beam"
         />
         {/* the release itself */}
         <g className="anim-lift">
-          <Slab cx={1030} cy={322} hw={40} hh={20} t={32} tone="orange" />
+          <Slab cx={1030} cy={322} hw={40} hh={20} t={32} tone="brand" />
           <g fill="#ffffff" fillOpacity="0.92">
             <path d="M1011 334l8 4.6v8l-8-4.6Z" />
             <path d="M1025 342l6 3.4v8l-6-3.4Z" />
@@ -272,7 +272,7 @@ export default function PipelineScene({ className }: { className?: string }) {
           cx={s.cx + s.hw - 18}
           cy={s.cy - 2}
           r="5"
-          fill={i === 3 ? "#f1521c" : "#2fa84f"}
+          fill={i === 3 ? "#0060fc" : "#2fa84f"}
           stroke={STROKE}
           strokeWidth="1"
           className="anim-tick"

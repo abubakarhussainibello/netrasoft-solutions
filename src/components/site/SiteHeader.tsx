@@ -1,9 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import BookCallButton from "./BookCall";
-import { CubeMark } from "./icons";
 
 const navLinks = [
   { label: "Home", href: "/#top", watch: "top" },
@@ -68,12 +68,16 @@ export default function SiteHeader({ active = "Home" }: { active?: string }) {
         <Link
           href="/"
           aria-label="NetraSoft Solutions home"
-          className="group flex shrink-0 items-center gap-2.5"
+          className="group flex shrink-0 items-center"
         >
-          <CubeMark className="h-7 w-auto transition-transform duration-500 group-hover:-translate-y-0.5 group-hover:rotate-[8deg]" title="NetraSoft Solutions" />
-          <span className="display hidden text-[19px] leading-none text-ink sm:block">
-            NetraSoft
-          </span>
+          <Image
+            src="/brand/netrasoft-logo.png"
+            alt="NetraSoft Solutions"
+            width={1100}
+            height={356}
+            priority
+            className="h-7 w-auto transition-transform duration-500 group-hover:-translate-y-0.5"
+          />
         </Link>
 
         <nav className="absolute left-1/2 top-1/2 hidden -translate-x-1/2 -translate-y-1/2 items-center gap-7 lg:flex">

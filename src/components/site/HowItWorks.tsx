@@ -128,7 +128,7 @@ export default function HowItWorks() {
                 className={[
                   "group relative flex h-full flex-col rounded-2xl border p-6 transition-all duration-300",
                   active
-                    ? "border-brand/40 bg-brand-soft/40 shadow-[0_14px_34px_rgba(241,82,28,0.10)]"
+                    ? "border-brand/40 bg-brand-soft/40 shadow-[0_14px_34px_rgba(0,96,252,0.10)]"
                     : "border-line bg-white hover:-translate-y-1 hover:border-brand/30 hover:shadow-[0_16px_36px_rgba(17,17,17,0.07)]",
                 ].join(" ")}
               >

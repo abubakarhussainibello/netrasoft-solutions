@@ -48,14 +48,31 @@ Footer`.
 Defined as CSS variables in `src/app/globals.css` and exposed to Tailwind through
 `@theme inline`, so they are usable as `bg-brand`, `text-ink`, `border-line`, etc.
 
+The palette is taken from the logo: `#0060fc` is the bright blue of the ribbon
+and the "Soft" wordmark, `#001860` the navy of "Netra".
+
 | Token | Value | Use |
 | --- | --- | --- |
 | `--background` | `#f6f6f3` | page ground |
-| `--ink` | `#17181a` | headlines, badges |
-| `--brand` | `#f1521c` | primary actions, accents |
-| `--brand-soft` | `#fdeee8` | active chip and icon-tile fills |
+| `--ink` | `#001860` | headlines, dark cards, badges |
+| `--foreground` | `#16161a` | body copy (stays graphite, not navy) |
+| `--brand` | `#0060fc` | primary actions, accents |
+| `--brand-dark` | `#0047c4` | pressed / hover depth |
+| `--brand-soft` | `#e8f0ff` | active chip and icon-tile fills |
 | `--live` | `#2fa84f` | running / passing states only |
 | `--line` / `--line-strong` | black at 7% / 13% | hairlines and blueprint rules |
+
+## Brand assets
+
+`public/brand/` holds the logo, trimmed to its alpha bounding box from the
+supplied artwork:
+
+- `netrasoft-logo.png` — full lockup, used in the header and footer
+- `netrasoft-mark.png` — the N on its own, used in the CTA and the call modal
+- `src/app/icon.png` — favicon, generated from the mark
+
+The source is raster, not vector. If a vector original turns up, swap these for
+SVG — the lockup is set at `h-7` in the header and would sharpen noticeably.
 
 Type: **EB Garamond** for display (its italic carries the headline emphasis),
 **Inter** for UI, **JetBrains Mono** for labels and eyebrows.

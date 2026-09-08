@@ -1,7 +1,8 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
-import { ArrowRight, Check, Clock, Phone, Shield, Users, CubeMark } from "./icons";
+import Image from "next/image";
+import { ArrowRight, Check, Clock, Phone, Shield, Users } from "./icons";
 
 const SLOTS = ["09:00", "10:30", "12:00", "14:00", "15:30", "17:00"];
 
@@ -256,7 +257,13 @@ function BookCallModal({ onClose }: { onClose: () => void }) {
                   </span>
                   <div className="mt-3 flex items-center gap-3">
                     <span className="grid h-9 w-9 place-items-center rounded-full bg-[#f2f2ef]">
-                      <CubeMark className="h-4 w-auto" />
+                      <Image
+                        src="/brand/netrasoft-mark.png"
+                        alt=""
+                        width={509}
+                        height={512}
+                        className="h-4 w-auto"
+                      />
                     </span>
                     <span className="text-[13px] leading-snug text-[#5c5c5e]">
                       A NetraSoft

@@ -1,5 +1,6 @@
+import Image from "next/image";
 import BookCallButton from "./BookCall";
-import { CubeMark, Scatter } from "./icons";
+import { Scatter } from "./icons";
 import { IsoLaunch } from "./iso-scenes";
 import { Reveal, Spotlight } from "./motion";
 
@@ -17,7 +18,13 @@ export default function CtaSection() {
             <div className="hatch anim-drift pointer-events-none absolute -right-10 top-0 h-[180px] w-[180px] -rotate-6" aria-hidden />
 
             <div className="relative">
-              <CubeMark className="anim-float mx-auto h-11 w-auto" />
+              <Image
+                src="/brand/netrasoft-mark.png"
+                alt=""
+                width={509}
+                height={512}
+                className="anim-float mx-auto h-12 w-auto"
+              />
 
               <h2 className="display mt-8 text-balance text-[34px] leading-[1.08] text-ink sm:text-[48px]">
                 Tell us what you are building.

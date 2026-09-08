@@ -73,7 +73,7 @@ function UptimeVisual() {
             height: `${b}%`,
             background:
               i >= bars.length - 3
-                ? "linear-gradient(180deg,#f76a34,#ef4b13)"
+                ? "linear-gradient(180deg,#3d85ff,#0054e8)"
                 : "rgba(17,17,17,0.10)",
             animationDelay: `${i * 70}ms`,
           }}

@@ -234,27 +234,3 @@ export function Scatter(p: P) {
     </svg>
   );
 }
-
-/* Isometric brand cube — the mark in the header and footer */
-export function CubeMark({
-  className,
-  title,
-}: {
-  className?: string;
-  title?: string;
-}) {
-  return (
-    <svg viewBox="0 0 48 52" className={className} role="img" aria-label={title}>
-      {title ? <title>{title}</title> : null}
-      {/* top face */}
-      <path d="M24 2 46 14.5 24 27 2 14.5Z" fill="#F86F38" />
-      {/* left face */}
-      <path d="M2 14.5 24 27v23L2 37.5Z" fill="#E04A12" />
-      {/* right face */}
-      <path d="M46 14.5 24 27v23l22-12.5Z" fill="#F1521C" />
-      {/* window notches on the left face */}
-      <path d="M8 22.5l5 2.9v5.1l-5-2.9Z" fill="#fff" fillOpacity="0.9" />
-      <path d="M16 27.1l4 2.3v5.1l-4-2.3Z" fill="#fff" fillOpacity="0.9" />
-    </svg>
-  );
-}

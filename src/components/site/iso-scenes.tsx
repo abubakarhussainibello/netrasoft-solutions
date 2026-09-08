@@ -59,7 +59,7 @@ const LOOP_STATIONS = [
   { key: "plan", label: "plan", cx: 600, cy: 148, tone: "light" as Tone },
   { key: "build", label: "build", cx: 864, cy: 280, tone: "dark" as Tone },
   { key: "review", label: "review", cx: 600, cy: 412, tone: "light" as Tone },
-  { key: "ship", label: "ship", cx: 336, cy: 280, tone: "orange" as Tone },
+  { key: "ship", label: "ship", cx: 336, cy: 280, tone: "brand" as Tone },
 ];
 
 export function IsoSprintLoop({ className }: { className?: string }) {
@@ -96,7 +96,7 @@ export function IsoSprintLoop({ className }: { className?: string }) {
         <Engraved cx={600} cy={286} hw={112} hh={56} size={18} dx={-0.66} dy={0.05}>
           sprint
         </Engraved>
-        <g fill="none" stroke="#f1521c" strokeWidth="1.5">
+        <g fill="none" stroke="#0060fc" strokeWidth="1.5">
           <ellipse cx="600" cy="282" rx="62" ry="31" className="anim-ring" />
           <ellipse cx="600" cy="282" rx="62" ry="31" className="anim-ring" style={{ animationDelay: "1400ms" }} />
         </g>
@@ -116,7 +116,7 @@ export function IsoSprintLoop({ className }: { className?: string }) {
             cx={s.cx + 60}
             cy={s.cy - 2}
             r="4.5"
-            fill={s.tone === "orange" ? "#f1521c" : "#2fa84f"}
+            fill={s.tone === "brand" ? "#0060fc" : "#2fa84f"}
             stroke={STROKE}
             strokeWidth="1"
             className="anim-tick"
@@ -136,7 +136,7 @@ export function IsoSprintLoop({ className }: { className?: string }) {
             animationDelay: `${delay}ms`,
           }}
         >
-          <Slab cx={0} cy={0} hw={15} hh={7.5} t={11} tone={i === 1 ? "dark" : "orange"} />
+          <Slab cx={0} cy={0} hw={15} hh={7.5} t={11} tone={i === 1 ? "dark" : "brand"} />
         </g>
       ))}
     </svg>
@@ -204,7 +204,7 @@ export function IsoChart({
               hw={24}
               hh={12}
               t={h}
-              tone={hot ? "orange" : "light"}
+              tone={hot ? "brand" : "light"}
               hatch={!hot}
             />
             {hot ? (
@@ -212,7 +212,7 @@ export function IsoChart({
                 cx={gx}
                 cy={gy - h - 24}
                 r="3.6"
-                fill="#f1521c"
+                fill="#0060fc"
                 className="anim-tick"
                 style={{ animationDelay: `${i * 220}ms` }}
               />
@@ -245,7 +245,7 @@ export function IsoHandover({ className }: { className?: string }) {
       {/* our side */}
       <g className="anim-drop">
         <Slab cx={126} cy={196} hw={86} hh={43} t={26} tone="dark" />
-        <Slab cx={126} cy={178} hw={40} hh={20} t={12} tone="orange" />
+        <Slab cx={126} cy={178} hw={40} hh={20} t={12} tone="brand" />
       </g>
 
       {/* your side */}
@@ -280,7 +280,7 @@ export function IsoHandover({ className }: { className?: string }) {
             animationDelay: `${delay}ms`,
           }}
         >
-          <Slab cx={212} cy={190} hw={14} hh={7} t={10} tone={i === 1 ? "dark" : "orange"} />
+          <Slab cx={212} cy={190} hw={14} hh={7} t={10} tone={i === 1 ? "dark" : "brand"} />
         </g>
       ))}
     </svg>
@@ -370,13 +370,13 @@ export function IsoLaunch({ className }: { className?: string }) {
       {/* the launching pad */}
       <g className="anim-drop" style={{ animationDelay: "120ms" }}>
         <Slab cx={450} cy={206} hw={92} hh={46} t={28} hatch />
-        <g fill="none" stroke="#f1521c" strokeWidth="1.6">
+        <g fill="none" stroke="#0060fc" strokeWidth="1.6">
           <ellipse cx="450" cy="202" rx="54" ry="27" className="anim-ring" />
           <ellipse cx="450" cy="202" rx="54" ry="27" className="anim-ring" style={{ animationDelay: "1400ms" }} />
         </g>
-        <path d="M428 190 L472 190 L460 132 L440 132Z" fill="#f1521c" fillOpacity="0.16" className="anim-beam" />
+        <path d="M428 190 L472 190 L460 132 L440 132Z" fill="#0060fc" fillOpacity="0.16" className="anim-beam" />
         <g className="anim-lift">
-          <Slab cx={450} cy={126} hw={42} hh={21} t={34} tone="orange" />
+          <Slab cx={450} cy={126} hw={42} hh={21} t={34} tone="brand" />
           <g fill="#ffffff" fillOpacity="0.92">
             <path d="M430 139l8 4.6v8l-8-4.6Z" />
             <path d="M444 147l6 3.4v8l-6-3.4Z" />

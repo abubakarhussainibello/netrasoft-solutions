@@ -1,5 +1,6 @@
+import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, CubeMark } from "./icons";
+import { ArrowRight } from "./icons";
 import { Reveal } from "./motion";
 
 const columns = [
@@ -48,9 +49,14 @@ export default function Footer() {
         <div className="grid gap-12 lg:grid-cols-[1.4fr_2fr]">
           <Reveal variant="fade-right">
             <div>
-              <Link href="/" aria-label="NetraSoft Solutions home" className="group inline-flex items-center gap-2.5">
-                <CubeMark className="h-8 w-auto transition-transform duration-500 group-hover:rotate-[8deg]" title="NetraSoft Solutions" />
-                <span className="display text-[21px] leading-none text-ink">NetraSoft</span>
+              <Link href="/" aria-label="NetraSoft Solutions home" className="group inline-flex items-center">
+                <Image
+                  src="/brand/netrasoft-logo.png"
+                  alt="NetraSoft Solutions"
+                  width={1100}
+                  height={356}
+                  className="h-8 w-auto transition-transform duration-500 group-hover:-translate-y-0.5"
+                />
               </Link>
               <p className="mt-5 max-w-xs text-[15px] leading-[1.7] text-[#5c5c5e]">
                 A software development studio. We design, build and maintain the

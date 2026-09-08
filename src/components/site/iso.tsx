@@ -9,7 +9,7 @@
 export const TONES = {
   light: { top: "#ffffff", left: "#e9e9e5", right: "#f5f5f2" },
   dark: { top: "#1c1d20", left: "#0b0b0c", right: "#26282c" },
-  orange: { top: "#fa7440", left: "#cd3c09", right: "#ee5119" },
+  brand: { top: "#4d8dff", left: "#0040b0", right: "#0058e6" },
 } as const;
 
 export type Tone = keyof typeof TONES;
